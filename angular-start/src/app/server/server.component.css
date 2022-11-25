@@ -1,0 +1,12 @@
+#server{
+    text-align: center;
+    color: rgb(217, 120, 255);
+}
+#btn1{
+    text-align: center;
+}
+
+p{
+    margin-right: 40px;
+    display: inline-block;
+}
