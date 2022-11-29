@@ -20,11 +20,11 @@ constructor(){
     if(this.name.length < 1){
         this.click = true;
     }
-    
+        
 }
 
 onClickM(){
-    alert("hi "+this.name)
+    alert("hi "+this.name+" you clicked on server component")
 }
 
 inPutName(event){

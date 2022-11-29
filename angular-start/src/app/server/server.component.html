@@ -1,9 +1,9 @@
 <div id="server">
     <h2 id="h211">This is server section</h2>
-    <label>Name:</label>
+    <label id="name">Name:</label>
     <input (input)="inPutName($event)">
     <br>
-    <button class="btn btn-primary" [disabled]="click" (click)="onClickM()">done</button>
+    <button class="btn btn-primary" id="btn1" [disabled]="click" (click)="onClickM()">done</button>
     <!-- <p>{{tell}}</p>
     <button class="btn btn-primary" [disabled]="btnboolean" (click)="onClickM()">
         click me 

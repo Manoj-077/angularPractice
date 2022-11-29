@@ -1,0 +1,11 @@
+<div id = "detail">
+    <label [ngStyle]="{backgroundColor : color() }">Enter name :</label>
+    <input id="name" (input)="name($event)">
+    <br>
+    <button class="btn btn-secondary" id="btn2" [disabled]="yn" (click)="say()" >ok</button>
+    <p *ngIf="!yn" [ngClass]="{orange: rnd()}" >entered {{ name1 }} in input</p>
+    <h4 *ngFor ="let i of ar; let ind = index " [ngStyle]="{backgroundColor: ind>3 ? 'pink':'yellow' }">
+        {{ i }}
+        
+    </h4> 
+</div>
