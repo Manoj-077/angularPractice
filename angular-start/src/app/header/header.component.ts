@@ -1,4 +1,4 @@
-import { Component } from "@angular/core"
+import { Component, EventEmitter, Output } from "@angular/core"
 
 @Component({
     selector : 'header-component',
@@ -6,5 +6,16 @@ import { Component } from "@angular/core"
     styleUrls : ['./header.component.css'] 
 })
 export class headerComponent{
+  @Output() rEvent = new EventEmitter();
+  @Output() lEvent = new EventEmitter();
+  r : boolean = true;
+  l : boolean = true;
+    showRecipes(){
+        this.rEvent.emit()
         
+    }
+    showSList(){
+        this.lEvent.emit();
+    }
+    
 }

@@ -7,4 +7,7 @@ import { Ingredient } from '../shared/ingredient.model';
 })
 export class ShoppingListComponent {
    ingredients :Ingredient[] = [new Ingredient('oranges',60),new Ingredient('carrots',80)];
+   addtoIng(event){
+    this.ingredients.push(event);
+   }
 }
