@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { Recipe } from '../../recipe.model';
 @Component({
   selector: 'app-recipe-item',
@@ -7,11 +7,13 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeItemComponent {
   @Input() recipes1 : Recipe;
+  @Output() onRecipe = new EventEmitter();
   i = 0;
   inc(){
     this.i = this.i + 1;
   }
   clickedon(event){
-    console.log(event.target.innerHTML)
+    this.onRecipe.emit(this.recipes1)
+    
   }
 }

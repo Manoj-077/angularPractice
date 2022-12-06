@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- r : boolean = false;
+ r : boolean = true;
  l : boolean = false;
   rlistened(){
     this.r = true;
