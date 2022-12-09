@@ -25,14 +25,14 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <a href="#" class="navbar-brand">Recipe book</a>
     <ul class="navbar-nav">
-        <li class="nav-item" ><a href="#" class="nav-link" (click)="showRecipes()">Recipes</a></li>
-        <li class="nav-item"><a href="#" class="nav-link" (click)="showSList()">Shopping List</a></li>
+        <li class="nav-item"  routerLinkActive="active" ><a class="nav-link" routerLink="/recipes" (click)="showRecipes()" >Recipes</a></li>
+        <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/shopping-list" (click)="showSList()">Shopping List</a></li>
     </ul>
     <ul class="navbar-nav ml-auto dropdown">
-        <a href="#" class="nav-link dropdown-toggle " [appDropdown]="drop" data-toggle="dropdown" id="dropdown1">Manage</a>
-        <div class="dropdown-menu" #drop aria-labelledby="dropdown1">
-            <a href="#" class="dropdown-item">Save Data</a>
-            <a href="#" class="dropdown-item">Fetch Data</a>
+        <a style="cursor: pointer;" class="nav-link dropdown-toggle mr-4" id="manage" [appDropdown]="drop" data-toggle="dropdown" id="dropdown1">Manage</a>
+        <div class="dropdown-menu mw-50" #drop aria-labelledby="dropdown1" id="dd">
+            <a style="cursor: pointer;" class="dropdown-item">Save Data</a>
+            <a style="cursor: pointer;" class="dropdown-item">Fetch Data</a>
         </div>    
     </ul>
 </nav>

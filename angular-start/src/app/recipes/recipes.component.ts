@@ -9,7 +9,7 @@ import { Recipe } from './recipe.model'
 export class recipes{
     recipeData : Recipe;
     assignD(event){
-       console.log(event)
+       console.log(event);
        this.recipeData = event;
     } 
 }

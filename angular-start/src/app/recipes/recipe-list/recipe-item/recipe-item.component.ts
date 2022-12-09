@@ -8,12 +8,13 @@ import { Recipe } from '../../recipe.model';
 export class RecipeItemComponent {
   @Input() recipes1 : Recipe;
   @Output() onRecipe = new EventEmitter();
+  @Input() index : number;
   i = 0;
   inc(){
     this.i = this.i + 1;
   }
   clickedon(event){
     this.onRecipe.emit(this.recipes1)
-    
+    console.log("this is recipe 1 "+ this.recipes1.name )
   }
 }

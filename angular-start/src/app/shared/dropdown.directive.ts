@@ -4,6 +4,7 @@ import {Directive, HostListener, HostBinding, Input, ElementRef, Renderer2} from
 })
 export class DropdownDirective {
    @Input('appDropdown') element: ElementRef;
+   
    constructor(private renderer: Renderer2) {}
    private isOpen = false;
  

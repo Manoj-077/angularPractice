@@ -3,9 +3,10 @@
         <app-recipe-list (sendR)="assignD($event)"></app-recipe-list>
     </div>
     <div class="col-md-7">
-        <app-recipe-detail *ngIf="recipeData; else selectSomething" [recipe]="recipeData" ></app-recipe-detail>
+        <!-- <app-recipe-detail *ngIf="recipeData; else selectSomething" [recipe]="recipeData" ></app-recipe-detail>
         <ng-template #selectSomething>
             <p>please select a recipe</p>
-        </ng-template>
+        </ng-template> -->
+        <router-outlet></router-outlet>
     </div>
 </div>
