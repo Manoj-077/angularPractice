@@ -6,15 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- r : boolean = true;
- l : boolean = false;
-  rlistened(){
-    this.r = true;
-    this.l = false;
-    
-  }
-  llistened(){
-    this.l = true;
-    this.r = false;
-  }
+ pipeString = "hello";
+ 
 }

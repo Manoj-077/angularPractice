@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShoppingListService } from '../services/shopping-list.service';
 import { Ingredient } from '../shared/ingredient.model';
 @Component({
   selector: 'app-shopping-list',
@@ -6,8 +7,12 @@ import { Ingredient } from '../shared/ingredient.model';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent {
-   ingredients :Ingredient[] = [new Ingredient('oranges',60),new Ingredient('carrots',80)];
-   addtoIng(event){
-    this.ingredients.push(event);
+   ingredients = this.slService.ingredients;
+   
+   constructor(private slService : ShoppingListService){
+
+   }
+   onEditItem(index){
+      this.slService.startEdit.next(index);
    }
 }
